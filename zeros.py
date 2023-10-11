@@ -24,7 +24,6 @@ def preencher_formulario():
         pyautogui.write("0")
         pyautogui.press("tab")
 
-
     time.sleep(1)
     pyautogui.press("down")
     time.sleep(1)
@@ -34,23 +33,22 @@ def preencher_formulario():
     time.sleep(1)
 
     #inserir a data da blindagem 
-    pyautogui.write("09/17/2020") 
+    #pyautogui.write("09/17/2020") 
     time.sleep(1)
     pyautogui.press("tab")
     #meses de blindagem 
-    pyautogui.write("24")
+    #pyautogui.write("24")
     pyautogui.press("tab")
     time.sleep(1)
     #subisidio se nao  tiver vai ter essa sequencia down, down, enter, tab
-    pyautogui.press("down")
-    pyautogui.press("down")
-    pyautogui.press("enter")
-    pyautogui.press("tab")
-    time.sleep(1)
-    #DATA DE ASSINTATURA
-    pyautogui.write("09/17/2020")
-    time.sleep(1)
-    pyautogui.press("tab")
+    #pyautogui.press("down")
+    #pyautogui.press("down")
+    #pyautogui.press("enter")
+    #pyautogui.press("tab")
+    #time.sleep(1)
+    #pyautogui.write("09/17/2020")
+    #time.sleep(1)
+    #pyautogui.press("tab")
     #envio do furmulario 
     #pyautogui.press("enter")
     #time.sleep(3)
