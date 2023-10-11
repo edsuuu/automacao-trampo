@@ -1,4 +1,13 @@
 @echo off
+
+echo Instalando o Python...
+
+python
+
+echo Instalação concluída.
+
+cls
+
 echo Instalando bibliotecas Python...
 
 cls
