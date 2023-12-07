@@ -28,10 +28,8 @@ def preencher_formulario():
 
     num_zeros = int(entrada_zeros.get())
 
-    # Tempo para clicar o no campo de entrada 
     time.sleep(2)
 
-    # chamando a funçao para trocar a cor do botao
     mudar_cor_verde()
 
     for _ in range(num_zeros):
@@ -104,7 +102,7 @@ janela.title("Auto-Forms")
 
 janela.geometry("400x200")  # Largura x Altura
 
-fonte = ("Arial", 14)  # fonte e tamanho
+fonte = ("Arial", 14)
 janela.option_add("*Font", fonte)
 
 tk.Label(janela, text="Limit 13 number").pack()
