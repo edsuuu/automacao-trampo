@@ -3,6 +3,8 @@ import pyautogui
 import time
 
 def preencher_formulario():
+
+
     def mudar_cor_verde():
         botao_iniciar.config(bg="green")
         janela.update()
@@ -11,8 +13,8 @@ def preencher_formulario():
         botao_iniciar.config(bg="SystemButtonFace")
         janela.update()
 
-    data_assinatura = "14/07/2023"
-    # data_blindagem = "01/07/2023"
+    data_assinatura = "18/07/2023"
+    data_blindagem = "01/07/2023"
 
     def descer_seleção():
         pyautogui.press("down")
@@ -21,10 +23,10 @@ def preencher_formulario():
 
     def preencher_blindagem():
         #data de blindagem 
-        pyautogui.write(data_assinatura) 
+        pyautogui.write(data_blindagem) 
         pyautogui.press("tab")
         #meses de blindagem
-        pyautogui.write("18")
+        pyautogui.write("24")
         pyautogui.press("tab")
 
     def preencher_outro():
@@ -57,52 +59,35 @@ def preencher_formulario():
         pyautogui.press("tab")
 
     #antecipaçao 
-    # pyautogui.write("0.6")
-    # pyautogui.press("tab")
+    pyautogui.write("1.5")
+    pyautogui.press("tab")
 
-    # for _ in range(4):
-    #     pyautogui.write("0")
-    #     time.sleep(0.1)
-    #     pyautogui.press("tab")
+    #pula as 9 linhas 
 
-    # pyautogui.write("10")
-    # pyautogui.press("tab")
-
-    # for _ in range(9):
-    #     pyautogui.write("0")
-    #     time.sleep(0.1)
-    #     pyautogui.press("tab")
+    for _ in range(11):
+        pyautogui.write("0")
+        time.sleep(0.1)
+        pyautogui.press("tab")
 
     #tem blindagem 
     descer_seleção()
 
-    time.sleep(1)
     preencher_blindagem()
-    time.sleep(1)
-    
+
     #n tem sub
     pyautogui.press("down")
-    #tem sub 
     descer_seleção()
-    # pyautogui.press("space")
-    # pyautogui.press("tab")
-    # pyautogui.press("tab")
-    # pyautogui.press("space")
-    # pyautogui.press("tab")
 
     #data de assinatura 
-    # time.sleep(1)
-    # time.sleep(1)
     pyautogui.write(data_assinatura)
-    # time.sleep(1)
     pyautogui.press("tab")
-    # pyautogui.press("enter")
-    
-    # time.sleep(2)
-    # preencher_outro()
-    # time.sleep(1)
-    # descer_seleção()
-    # descer_seleção()
+    pyautogui.press("enter")
+
+    time.sleep(2)
+    preencher_outro()
+    time.sleep(1)
+    descer_seleção()
+    descer_seleção()
 
     restaurar_cor_original()
 
@@ -112,10 +97,10 @@ janela.title("Auto-Forms")
 
 janela.geometry("400x200")  # Largura x Altura
 
-fonte = ("Arial", 14)
+fonte = ("Arial", 13)
 janela.option_add("*Font", fonte)
 
-tk.Label(janela, text="Limit 13 number").pack()
+tk.Label(janela, text="1 para vale transporte").pack()
 entrada_zeros = tk.Entry(janela)
 entrada_zeros.pack()
 
