@@ -4,7 +4,6 @@ import time
 
 def preencher_formulario():
 
-
     def mudar_cor_verde():
         botao_iniciar.config(bg="green")
         janela.update()
@@ -83,11 +82,11 @@ def preencher_formulario():
     pyautogui.press("tab")
     pyautogui.press("enter")
 
-    time.sleep(2)
-    preencher_outro()
-    time.sleep(1)
-    descer_seleção()
-    descer_seleção()
+    # time.sleep(2)
+    # preencher_outro()
+    # time.sleep(1)
+    # descer_seleção()
+    # descer_seleção()
 
     restaurar_cor_original()
 

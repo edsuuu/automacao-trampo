@@ -65,13 +65,13 @@ def preencher_formulario():
     #     time.sleep(0.1)
     #     pyautogui.press("tab")
 
-    # pyautogui.write("10")
-    # pyautogui.press("tab")
+    pyautogui.write("10")
+    pyautogui.press("tab")
 
-    # for _ in range(9):
-    #     pyautogui.write("0")
-    #     time.sleep(0.1)
-    #     pyautogui.press("tab")
+    for _ in range(9):
+        pyautogui.write("0")
+        time.sleep(0.1)
+        pyautogui.press("tab")
 
     #tem blindagem 
     descer_seleção()
