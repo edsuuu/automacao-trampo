@@ -1,19 +1,44 @@
 import pyautogui
 import time
 
-#preencher outro forms
-pyautogui.moveTo(1400, 501)
-# pyautogui.click()
-# time.sleep(1)
-# #copiar assunto
-# #mover pro vs code e clicar e copiar 
-# pyautogui.moveTo(3100, 115)
+# pyautogui.moveTo(3600, 350) #cnpj
+# time.sleep(0.3)
 # pyautogui.click()
 # pyautogui.hotkey('ctrl', 'c')
-# time.sleep(0.5)
-# # #mover pro terminal e colar 
-# pyautogui.moveTo(2400, 525)
+# time.sleep(0.3)
+# pyautogui.moveTo(1000, 840)
+# time.sleep(0.3)
 # pyautogui.click()
-# time.sleep(0.5)
 # pyautogui.hotkey('ctrl', 'v')
 # pyautogui.press("tab")
+# time.sleep(0.3)
+
+# pyautogui.moveTo(3600, 320)#razao social
+# pyautogui.click()
+# time.sleep(0.3)
+# pyautogui.hotkey('ctrl', 'c')
+# time.sleep(0.3)
+# pyautogui.moveTo(1000, 585)
+# time.sleep(0.3)
+# pyautogui.click()
+# pyautogui.hotkey('ctrl', 'v')
+
+# time.sleep(0.3)
+# pyautogui.moveTo(3600, 400)#apagar cnpj
+# time.sleep(0.3)
+# pyautogui.click()
+
+# time.sleep(0.3)
+# pyautogui.keyDown('shift')
+# pyautogui.press('up')
+# pyautogui.press('up')
+# pyautogui.press('up')
+# pyautogui.press('up')
+
+# pyautogui.keyUp('shift')
+
+# pyautogui.press('backspace')
+
+
+pyautogui.moveTo(1000, 585)
+pyautogui.click()

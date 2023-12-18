@@ -42,6 +42,7 @@ class InterfaceGrafica:
         pyautogui.press('left')
 
         pyautogui.keyDown('shift')
+        pyautogui.keyUp('shift')
 
         total_iterations = 100
 

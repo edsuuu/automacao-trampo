@@ -2,7 +2,7 @@ const fs = require('fs');
 
 function transformarTextoEmJSON() {
 
-    const conteudoTxt = fs.readFileSync('./seuarquivo.txt', 'utf-8');
+    const conteudoTxt = fs.readFileSync('seuarquivo.txt', 'utf-8');
 
     const linhas = conteudoTxt.split('\n');
 
