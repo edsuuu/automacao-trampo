@@ -42,26 +42,15 @@ class InterfaceGrafica:
         pyautogui.press('left')
 
         pyautogui.keyDown('shift')
-        pyautogui.keyUp('shift')
 
-        total_iterations = 100
+        total_iterations = 10000
 
         for i in range(total_iterations):
             if not self.executando:
                 break
 
             pyautogui.press('down')
-            time.sleep(0.1)
-            pyautogui.press('down')
-            time.sleep(0.1)
-            pyautogui.press('down')
-            time.sleep(0.1)
-            pyautogui.press('down')
-            time.sleep(0.1)
-            pyautogui.press('down')
-            time.sleep(0.1)
-            pyautogui.press('down')
-            time.sleep(0.1)
+
 
         pyautogui.keyUp('shift')
 

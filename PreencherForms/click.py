@@ -1,7 +1,7 @@
 import pyautogui
 import time
 
-# pyautogui.moveTo(3600, 350) #cnpj
+pyautogui.moveTo(3600, 350) #cnpj
 # time.sleep(0.3)
 # pyautogui.click()
 # pyautogui.hotkey('ctrl', 'c')
@@ -39,6 +39,7 @@ import time
 
 # pyautogui.press('backspace')
 
-
-pyautogui.moveTo(1000, 585)
+pyautogui.moveTo(1850, 905)
 pyautogui.click()
+
+# pyautogui.moveTo(1000, 855) 

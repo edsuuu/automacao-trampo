@@ -11,7 +11,7 @@ def preencher_formulario():
         botao_iniciar.config(bg="SystemButtonFace")
         janela.update()
 
-    data_assinatura = "29/05/2023"
+    data_assinatura = "06/06/2023"
     # data_blindagem = "01/07/2023"
 
     def descer_seleção():
@@ -88,6 +88,9 @@ def preencher_formulario():
 
     num_zeros = int(entrada_zeros.get())
 
+    pyautogui.moveTo(1000, 855) 
+    pyautogui.click()
+    pyautogui.click()
     time.sleep(2)
 
     mudar_cor_verde()
@@ -107,8 +110,8 @@ def preencher_formulario():
         time.sleep(0.1)
         pyautogui.press("tab")
 
-    #remissao
-    # pyautogui.write("10")
+    # # remissao
+    # pyautogui.write("5")
     # pyautogui.press("tab")
 
     # for _ in range(4):
@@ -124,14 +127,14 @@ def preencher_formulario():
     # time.sleep(1)
     
     #n tem sub
-    pyautogui.press("down")
+    # pyautogui.press("down")
     # #tem sub 
     descer_seleção()
     # pyautogui.press("space")
-    # pyautogui.press("tab")
-    # pyautogui.press("tab")
-    # pyautogui.press("space")
-    # pyautogui.press("tab")
+    pyautogui.press("tab")
+    pyautogui.press("tab")
+    pyautogui.press("space")
+    pyautogui.press("tab")
 
     #data de assinatura 
     # time.sleep(1)
@@ -139,20 +142,28 @@ def preencher_formulario():
     pyautogui.write(data_assinatura)
     time.sleep(0.5)
     pyautogui.press("tab")
-    # pyautogui.press("enter")
+    pyautogui.press("enter")
     
-    # time.sleep(2)
-    # preencher_outro()
-    # time.sleep(1)
-    # descer_seleção()
-    # descer_seleção()
-    # time.sleep(1)
-    # copiarCnpj()
-    # pyautogui.moveTo(1000, 585)
-    # pyautogui.click()
-    # pyautogui.press("tab")
-    # descer_seleção()
-    # descer_seleção()
+    time.sleep(2)
+    preencher_outro()
+    time.sleep(1)
+    descer_seleção()
+    descer_seleção()
+    time.sleep(1)
+    copiarCnpj()
+    pyautogui.moveTo(1000, 585)
+    pyautogui.click()
+    pyautogui.press("tab")
+
+    for _ in range(9):
+        pyautogui.press("down")
+
+    pyautogui.press("enter")
+    pyautogui.press("tab")
+
+    descer_seleção()
+    pyautogui.moveTo(1850, 905)
+
 
     restaurar_cor_original()
 
