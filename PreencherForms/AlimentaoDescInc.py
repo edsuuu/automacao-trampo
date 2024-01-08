@@ -11,8 +11,8 @@ def preencher_formulario():
         botao_iniciar.config(bg="SystemButtonFace")
         janela.update()
 
-    data_assinatura = "29/05/2023"
-    data_blindagem = "12/05/2023"
+    data_assinatura = "30/05/2023"
+    # data_blindagem = "01/07/2023"
 
     def descer_seleção():
         pyautogui.press("down")
@@ -22,11 +22,12 @@ def preencher_formulario():
     def preencher_blindagem():
         #data de blindagem 
         time.sleep(0.5)
-        pyautogui.write(data_blindagem) 
+        pyautogui.write(data_assinatura) 
         time.sleep(0.5)
         pyautogui.press("tab")
         #meses de blindagem
-        pyautogui.write("36")
+        pyautogui.write("12")
+        # pyautogui.press("tab")
         pyautogui.press("tab")
 
     def preencher_outro():
@@ -102,12 +103,13 @@ def preencher_formulario():
         pyautogui.press("tab")
 
     # antecipaçao
-    pyautogui.write("0.3")
-    pyautogui.press("tab")
+    # pyautogui.write("0.3")
+    # pyautogui.press("tab")
 
-    for _ in range(9):
-        pyautogui.write("0")
-        pyautogui.press("tab")
+    # for _ in range(9):
+    #     pyautogui.write("0")
+    #     time.sleep(0.1)
+    #     pyautogui.press("tab")
 
     # # remissao
     # pyautogui.write("5")
@@ -121,23 +123,23 @@ def preencher_formulario():
     #tem blindagem 
     descer_seleção()
 
-    time.sleep(1)
+    # time.sleep(1)
     preencher_blindagem()
-    time.sleep(1)
+    # time.sleep(1)
     
     #n tem sub
-    # pyautogui.press("down")
-    # # #tem sub 
+    pyautogui.press("down")
+    # #tem sub 
     descer_seleção()
     # pyautogui.press("space")
-    pyautogui.press("tab")
-    pyautogui.press("tab")
-    pyautogui.press("space")
-    pyautogui.press("tab")
+    # pyautogui.press("tab")
+    # pyautogui.press("tab")
+    # pyautogui.press("space")
+    # pyautogui.press("tab")
 
     #data de assinatura 
     # time.sleep(1)
-    # time.sleep(0.5)
+    time.sleep(0.5)
     pyautogui.write(data_assinatura)
     time.sleep(0.5)
     pyautogui.press("tab")
@@ -176,7 +178,7 @@ janela.geometry("400x200")  # Largura x Altura
 fonte = ("Arial", 14)
 janela.option_add("*Font", fonte)
 
-tk.Label(janela, text="Limit 13 number").pack()
+tk.Label(janela, text="Alimemtação Digite 4").pack()
 entrada_zeros = tk.Entry(janela)
 entrada_zeros.pack()
 
@@ -184,3 +186,6 @@ botao_iniciar = tk.Button(janela, text="Iniciar Preenchimento", command=preenche
 botao_iniciar.pack()
 
 janela.mainloop()
+
+
+
