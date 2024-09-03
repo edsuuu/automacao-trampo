@@ -44,56 +44,37 @@ def imprimir_erro(mensagem):
 
 imprimir_com_mensagem("ABRINDO A APLICAÇÃO")
 
-def abrir_links_da_lista(driver, lista_id):
-    ul_element = None
+def abrir_links_dos_artigos(driver):
+    artigos = None
     try:
-        ul_element = driver.find_element(By.ID, lista_id)
+        artigos = driver.find_elements(By.CSS_SELECTOR, 'article.wpr-grid-item')
     except Exception as e:
         imprimir_erro(str(e))
         return
 
-    links = ul_element.find_elements(By.TAG_NAME, 'a')
-    for link in links:
-        link_url = link.get_attribute('href')
-        driver.execute_script("window.open('" + link_url + "', '_blank');")
-        time.sleep(2) 
+    for artigo in artigos:
+        try:
+            link = artigo.find_element(By.CSS_SELECTOR, 'h2.wpr-grid-item-title a')
+            link_url = link.get_attribute('href')
+            driver.execute_script("window.open('" + link_url + "', '_blank');")
+            time.sleep(2)
+        except Exception as e:
+            imprimir_erro(str(e))
+            continue
 
 num_ciclos = 50
 
 for _ in range(num_ciclos):
     driver = webdriver.Edge()
-    driver.get('https://gazetamorena.com.br/categoria/policia/')
+    driver.get('https://gazetamorena.com/category/campogrande/')
     limpar_console()
     time.sleep(1)
     imprimir_com_mensagem("EXECUTANDO SEGUNDA VEZ")
     time.sleep(3)
     limpar_console()
     
+    abrir_links_dos_artigos(driver)
 
-    segundo_link = None
-    try:
-        segundo_link = driver.find_element(By.CSS_SELECTOR, 'body > div.jeg_viewport > div.jeg_main > div > div.jeg_content > div.jeg_section > div > div.jeg_cat_content.row > div.jeg_main_content.jeg_column.col-sm-8 > div > div.jnews_category_content_wrapper > div > div.jeg_block_container > div.jeg_posts.jeg_load_more_flag > article:nth-child(2) > div.jeg_postblock_content > h3 > a').get_attribute('href')
-    except Exception as e:
-        imprimir_erro(str(e))
-        driver.quit()
-        continue
-
-    driver.execute_script("window.open('" + segundo_link + "', '_blank');")
-
-    imprimir_com_mensagem("EXECUTANDO TERCEIRA VEZ")
-    time.sleep(5)
-    limpar_console()
-
-    driver.switch_to.window(driver.window_handles[-1])
-
-    imprimir_com_mensagem("ABRINDO CADA PÁGINA $")
-
-    abrir_links_da_lista(driver, 'recent-posts-2')
-
-    driver.close()
-    limpar_console()
-
-    driver.switch_to.window(driver.window_handles[0])
     imprimir_com_mensagem("FECHANDO A APLICAÇÃO")
     time.sleep(2)
 

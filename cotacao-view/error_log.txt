@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "C:\Users\edsu\Desktop\automacao-trampo\cotacao-view\src\script-abrir-pag.py", line 105, in <module>
+    time.sleep(1)
+KeyboardInterrupt
