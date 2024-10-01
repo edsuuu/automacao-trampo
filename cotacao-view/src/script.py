@@ -41,7 +41,7 @@ class TimerApp:
             self.update_timer()
             self.status_label.config(text="APLICAÇÃO RODANDO", fg="green")
 
-            process = subprocess.Popen(["python", "script-abrir-pag.py"])
+            process = subprocess.Popen(["python", "./script-abrir-pag.py"])
             self.processes.append(process)
 
     def stop_timer(self):
