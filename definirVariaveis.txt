@@ -1,5 +1,0 @@
-$env:Path = "C:\Users\edson.dasilva.ext\Documents\github\php-8.2.13-nts-Win32-vs16-x64;$env:Path"
-
-$env:Path = "C:\Users\edson.dasilva.ext\Documents\github\node-v20.9.0-win-x64;$env:Path"
-
-$env:Path = "C:\Users\edson.dasilva.ext\Documents\github\composer;$env:Path"
